@@ -5,43 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">AmazonClone</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search products...">
-            <button>Search</button>
+        <div class="nav-belt">
+            <div class="nav-logo border-hover">
+                <span class="logo-text">amazon</span>
+            </div>
+            
+            <div class="nav-location border-hover">
+                <p class="loc-line-1">Deliver to</p>
+                <p class="loc-line-2"><i class="fa-solid fa-location-dot"></i> India</p>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Computers</option>
+                </select>
+                <input type="text" placeholder="Search Amazon" class="search-input">
+                <button class="search-icon" onclick="triggerSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="nav-tools border-hover">
+                <p class="loc-line-1">Hello, sign in</p>
+                <p class="loc-line-2">Account & Lists</p>
+            </div>
+
+            <div class="nav-tools border-hover">
+                <p class="loc-line-1">Returns</p>
+                <p class="loc-line-2">& Orders</p>
+            </div>
+
+            <div class="nav-cart border-hover" onclick="addToCart()">
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                <span id="cart-count">0</span>
+                <p class="loc-line-2 cart-text">Cart</p>
+            </div>
         </div>
-        <div class="cart">🛒 Cart: <span id="cart-count">0</span></div>
+
+        <div class="nav-main">
+            <div class="nav-item border-hover"><i class="fa-solid fa-bars"></i> All</div>
+            <div class="nav-item border-hover">Today's Deals</div>
+            <div class="nav-item border-hover">Customer Service</div>
+            <div class="nav-item border-hover">Registry</div>
+            <div class="nav-item border-hover">Gift Cards</div>
+            <div class="nav-item border-hover">Sell</div>
+        </div>
     </header>
 
-    <main class="product-grid">
-        
-        <div class="product-card">
-            <img src="https://via.placeholder.com/150/0000FF/808080?Text=Digital.com" alt="Laptop">
-            <h3 class="product-title">High-Performance Laptop</h3>
-            <p class="price">₹85,000</p>
-            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+    <main class="main-content">
+        <div class="hero-section">
+            <div class="hero-message">
+                <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
+            </div>
         </div>
 
-        <div class="product-card">
-            <img src="https://via.placeholder.com/150/FF0000/FFFFFF?Text=Digital.com" alt="Headphones">
-            <h3 class="product-title">Noise Cancelling Headphones</h3>
-            <p class="price">₹12,500</p>
-            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-        </div>
+        <div class="shop-section">
+            
+            <div class="shop-card">
+                <h2>Gaming accessories</h2>
+                <div class="card-img-grid">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=200" alt="Keyboard">
+                    <img src="https://images.unsplash.com/photo-1606220838315-056192d5e927?w=200" alt="Mouse">
+                    <img src="https://images.unsplash.com/photo-1599669500516-b873c9921503?w=200" alt="Headset">
+                    <img src="https://images.unsplash.com/photo-1589780072124-bba91bdf1015?w=200" alt="Chair">
+                </div>
+                <a href="#">See more</a>
+            </div>
 
-        <div class="product-card">
-            <img src="https://via.placeholder.com/150/00FF00/000000?Text=Digital.com" alt="Smartwatch">
-            <h3 class="product-title">Fitness Smartwatch</h3>
-            <p class="price">₹4,999</p>
-            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-        </div>
+            <div class="shop-card">
+                <h2>Electronics for you</h2>
+                <div class="card-img-single">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400" alt="Laptop">
+                </div>
+                <a href="#">Shop now</a>
+            </div>
 
+            <div class="shop-card">
+                <h2>Home & Kitchen</h2>
+                <div class="card-img-single">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?w=400" alt="Kitchenware">
+                </div>
+                <a href="#">Explore more</a>
+            </div>
+
+            <div class="shop-card">
+                <h2>Deal of the Day</h2>
+                <div class="card-img-single">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400" alt="Smartwatch">
+                </div>
+                <p style="margin-top:10px; color:#cc0c39;">Up to 40% off</p>
+                <a href="#">See all deals</a>
+            </div>
+
+        </div>
     </main>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
