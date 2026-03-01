@@ -1,4 +1,4 @@
-# clone-amazon# 🛒 Amazon Clone Frontend
+ 🛒 Amazon Clone Frontend
 
 A responsive, front-end clone of the Amazon homepage built to demonstrate modern web design principles and UI layout techniques. 
 
